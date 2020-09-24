@@ -1,0 +1,25 @@
+INSERT INTO product (COUNT_OF_PRODUCT_IN_STOCK, MANUFACTURER, PRICE, SERIAL_NUMBER) VALUES
+  (2, 'LG', 15000, 123),
+  (3, 'BENQ', 14599, 1234),
+  (4, 'Razor', 29800, 1223),
+  (1, 'Panzor', 55700, 4589),
+  (5, 'Kingston', 2500, 134589),
+  (3, 'APanther', 2499, 458932),
+  (2, 'Lenovo', 22700, 98721),
+  (1, 'Asus', 31999, 58219);
+
+INSERT INTO MONITOR (DIAGONAL, ID) VALUES
+  ('24', 1),
+  ('22', 2);
+
+INSERT INTO COMPUTER (FORM_FACTOR, ID) VALUES
+  ('Desktop', 3),
+  ('Monoblock', 4);
+
+INSERT INTO HARD_DISK (CAPACITY, ID) VALUES
+  (128, 5),
+  (256, 6);
+
+INSERT INTO NOTEBOOK (SIZE, ID) VALUES
+  (15, 7),
+  (17, 8);
