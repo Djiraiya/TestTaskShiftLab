@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "6e8e0f88-fb95-47e8-b0c6-1e86c152475c",
+		"name": "ShiftTestLab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllComputerList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/computer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"computer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getComputerById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "computerId",
+						"value": "3",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/computer/:computerId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"computer",
+						":computerId"
+					],
+					"variable": [
+						{
+							"key": "computerId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createComputer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\":1234599,\r\n    \"manufacturer\":\"HP\",\r\n    \"price\":68000,\r\n    \"countOfProductInStock\":2,\r\n    \"formFactor\":\"Desktop\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/computer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"computer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateComputer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\":124599,\r\n    \"manufacturer\":\"HP\",\r\n    \"price\":65000,\r\n    \"countOfProductInStock\":1,\r\n    \"formFactor\":\"Monoblock\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/computer/:computerId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"computer",
+						":computerId"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "computerId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllHardDiskList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/harddisk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"harddisk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getHardDiskById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/harddisk/:hardDiskId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"harddisk",
+						":hardDiskId"
+					],
+					"variable": [
+						{
+							"key": "hardDiskId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createHardDisk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\":123459219,\r\n    \"manufacturer\":\"Crucial\",\r\n    \"price\":8000,\r\n    \"countOfProductInStock\":5,\r\n    \"capacity\":512\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/harddisk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"harddisk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateHardDisk",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\": 134589,\r\n    \"manufacturer\": \"Kingston\",\r\n    \"price\": 2500.0,\r\n    \"countOfProductInStock\": 4,\r\n    \"capacity\": 128\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/harddisk/:hardDiskId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"harddisk",
+						":hardDiskId"
+					],
+					"variable": [
+						{
+							"key": "hardDiskId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllMonitorList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/monitor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMonitorById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/monitor/:monitorId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						":monitorId"
+					],
+					"variable": [
+						{
+							"key": "monitorId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createMonitor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\": 123123,\r\n    \"manufacturer\": \"LG\",\r\n    \"price\": 12000.0,\r\n    \"countOfProductInStock\": 22,\r\n    \"diagonal\": \"18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monitor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMonitor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\": 123,\r\n    \"manufacturer\": \"LG\",\r\n    \"price\": 14000.0,\r\n    \"countOfProductInStock\": 2,\r\n    \"diagonal\": \"24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/monitor/:monitorId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monitor",
+						":monitorId"
+					],
+					"variable": [
+						{
+							"key": "monitorId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllNotebookList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNotebookById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notebook/:notebookId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notebook",
+						":notebookId"
+					],
+					"variable": [
+						{
+							"key": "notebookId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNotebook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\": 9872211,\r\n    \"manufacturer\": \"MSI\",\r\n    \"price\": 54700.0,\r\n    \"countOfProductInStock\": 1,\r\n    \"size\": 17\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/notebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateNotebook",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNumber\": 98721,\r\n    \"manufacturer\": \"Lenovo\",\r\n    \"price\": 22700.0,\r\n    \"countOfProductInStock\": 3,\r\n    \"size\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/notebook/:notebookId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notebook",
+						":notebookId"
+					],
+					"variable": [
+						{
+							"key": "notebookId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
